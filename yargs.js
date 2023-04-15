@@ -9,10 +9,12 @@ const args = require('yargs')
     })
     .command("sub [num1] [num2]", "Subtract the second number from the first number", yargs => {
         yargs.positional('num1', {
-            type: 'number'
+            type: 'number',
+            demandOption: true
         }),
         yargs.positional('num2', {
-            type: 'number'
+            type: 'number',
+            demandOption: true
         })
     })
     .command("mult [num1] [num2]", "Multiply a number by another", yargs => {
