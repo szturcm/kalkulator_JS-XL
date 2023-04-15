@@ -19,5 +19,5 @@ else if(command === 'div'){
     console.log(result);
 }
 else {
-    console.log('Nieznana komenda');
+    console.log('Unknown command. Try again.');
 };

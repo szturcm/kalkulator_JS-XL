@@ -1,5 +1,5 @@
 const args = require('yargs')
-    .command("add <num1> <num2>", "Add two numbers", yargs => {
+    .command("add [num1] [num2]", "Add two numbers", yargs => {
         yargs.positional('num1', {
             type: 'number'
         }),
@@ -7,7 +7,7 @@ const args = require('yargs')
             type: 'number'
         })
     })
-    .command("sub <num1> <num2>", "Subtract the second number from the first number", yargs => {
+    .command("sub [num1] [num2]", "Subtract the second number from the first number", yargs => {
         yargs.positional('num1', {
             type: 'number'
         }),
@@ -15,7 +15,7 @@ const args = require('yargs')
             type: 'number'
         })
     })
-    .command("mult <num1> <num2>", "Multiply a number by another", yargs => {
+    .command("mult [num1] [num2]", "Multiply a number by another", yargs => {
         yargs.positional('num1', {
             type: 'number'
         }),
@@ -23,7 +23,7 @@ const args = require('yargs')
             type: 'number'
         })
     })
-    .command("div <num1> <num2>", "Divide the first number by the second number", yargs => {
+    .command("div [num1] [num2]", "Divide the first number by the second number", yargs => {
         yargs.positional('num1', {
             type: 'number'
         }),
