@@ -14,7 +14,7 @@ const loadHistory = () => {
 }
 
 const append = (arg1, arg2, operand, result) => {
-    if (result !== null){
+    if (Number.isNaN(result) === false){
         let history = loadHistory();
         let operation = (arg1 + operand + arg2).toString();
         let data = {
@@ -47,8 +47,10 @@ else if(command === 'mult'){
 }
 else if(command === 'div'){
     let result = op.divide(args.num1, args.num2);
-    console.log(result);
-    append(args.num1, args.num2, "/", result);
+    if (args.num2 !== 0){
+        console.log(result);
+        append(args.num1, args.num2, "/", result);
+    }   
 }
 else {
     console.log('Unknown command. Try again.');
